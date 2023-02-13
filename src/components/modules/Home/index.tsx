@@ -1,12 +1,12 @@
 import { HiChevronDown } from "react-icons/hi";
 
-import Navbar from "../components/Navbar";
-import Presentation from "../components/Presentation";
-import Contact from "../components/Contact";
+import Navbar from "../../Navbar";
+import Presentation from "../../Presentation";
+import Contact from "../../Contact";
 
-import { handleClickScroll } from "../pages/api/commons";
+import { handleClickScroll } from "../../../pages/api/commons";
 
-import styles from "../styles/custom.module.css";
+import styles from "../../../styles/custom.module.css";
 
 export default function Home() {
   return (

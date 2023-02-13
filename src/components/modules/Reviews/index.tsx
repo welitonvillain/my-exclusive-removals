@@ -1,14 +1,14 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
 
-import { openWhatsapp } from "../pages/api/whatsapp";
-import { sendEmail } from "../pages/api/email";
-import { getReviews } from "../pages/api/reviews";
+import { openWhatsapp } from "../../../pages/api/whatsapp";
+import { sendEmail } from "../../../pages/api/email";
+import { getReviews } from "../../../pages/api/reviews";
 
-import Title from "../components/Title";
-import Review from "../components/Review";
+import Title from "../../Title";
+import Review from "../../Review";
 
-import styles from "../styles/custom.module.css";
+import styles from "../../../styles/custom.module.css";
 
 export default function Reviews() {
   return (
@@ -25,6 +25,7 @@ export default function Reviews() {
         <section className="flex w-full h-64 overflow-x-auto px-4 lg:h-80 lg:px-12">
           {getReviews().map((review) => (
             <Review
+              key={review.author}
               message={review.message}
               author={review.author}
               stars={review.stars}
