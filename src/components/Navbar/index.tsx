@@ -1,3 +1,4 @@
+import React, { useRef } from "react";
 import Image from "next/image";
 
 import logoImg from "../../assets/logo.png";

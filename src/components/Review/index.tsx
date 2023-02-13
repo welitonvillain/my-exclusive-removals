@@ -11,7 +11,7 @@ interface reviewType {
 function makeStars(quantity: number): JSX.Element[] {
   const stars = [];
   for (let i = 0; i < quantity; i++) {
-    stars.push(<AiFillStar />);
+    stars.push(<AiFillStar key={i} />);
   }
 
   return stars;
