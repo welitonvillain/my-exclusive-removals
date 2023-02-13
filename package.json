@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "deploy:local": "next build && pm2 startOrRestart ecosystem.config.js --env local",
+    "deploy:dev": "next build && pm2 startOrRestart ecosystem.config.js --env development",
+    "deploy:prod": "next build && pm2 startOrRestart ecosystem.config.js --env production"
   },
   "dependencies": {
     "@next/font": "13.1.1",
