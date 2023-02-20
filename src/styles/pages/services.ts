@@ -153,7 +153,7 @@ export const ProcessCard = styled("div", {
     marginRight: "1rem",
 
     "@media (min-width: 640px)": {
-      marginRight: "1.25rem",
+      margin: "0 1.25rem",
     },
   },
 
@@ -170,7 +170,7 @@ export const ProcessContent = styled("div", {
   width: "100%",
   height: "100%",
   padding: "0.75rem",
-  backgroundColor: "rgb(255, 255, 255, 20%)",
+  backgroundColor: "rgb(255, 255, 255, 15%)",
   color: "$white",
   borderRadius: "0.5rem",
 
