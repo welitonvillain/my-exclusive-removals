@@ -77,6 +77,18 @@ export default function Services() {
           <ProcessCard>
             <span>2</span>
             <ProcessContent>
+              <span className="processCardTitle">Declutter</span>
+              <span className="processCardDesc">
+                Need to dispose of furniture, possessions or general clutter?
+                We’ll take care of that for you — whether it involves charitable
+                donations or the local tip.
+              </span>
+            </ProcessContent>
+          </ProcessCard>
+
+          <ProcessCard>
+            <span>3</span>
+            <ProcessContent>
               <span className="processCardTitle">Packing</span>
               <span className="processCardDesc">
                 If you want us to take care of packing up your current property,
@@ -87,7 +99,7 @@ export default function Services() {
           </ProcessCard>
 
           <ProcessCard>
-            <span>3</span>
+            <span>4</span>
             <ProcessContent>
               <span className="processCardTitle">Moving</span>
               <span className="processCardDesc">
@@ -99,25 +111,13 @@ export default function Services() {
           </ProcessCard>
 
           <ProcessCard>
-            <span>4</span>
-            <ProcessContent>
-              <span className="processCardTitle">Declutter</span>
-              <span className="processCardDesc">
-                Need to dispose of furniture, possessions or general clutter?
-                We’ll take care of that for you — whether it involves charitable
-                donations or the local tip.
-              </span>
-            </ProcessContent>
-          </ProcessCard>
-
-          <ProcessCard>
             <span>5</span>
             <ProcessContent>
-              <span className="processCardTitle">Unpacking</span>
+              <span className="processCardTitle">Cleaning</span>
               <span className="processCardDesc">
-                As part of our planning process, we’ll make arrangements to
-                unpack your possessions at your new property — leaving you free
-                to enjoy the experience.
+                If you need help with cleaning your old or new property, we can
+                arrange for a professional cleaning service to attend on the
+                day.
               </span>
             </ProcessContent>
           </ProcessCard>
@@ -125,11 +125,11 @@ export default function Services() {
           <ProcessCard>
             <span>6</span>
             <ProcessContent>
-              <span className="processCardTitle">Cleaning</span>
+              <span className="processCardTitle">Unpacking</span>
               <span className="processCardDesc">
-                If you need help with cleaning your old or new property, we can
-                arrange for a professional cleaning service to attend on the
-                day.
+                As part of our planning process, we’ll make arrangements to
+                unpack your possessions at your new property — leaving you free
+                to enjoy the experience.
               </span>
             </ProcessContent>
           </ProcessCard>

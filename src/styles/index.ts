@@ -17,6 +17,7 @@ export const {
       blue: "#60A5FA",
       black: "#131313",
       white: "#FFFFFF",
+      gray: "#F2F3F5",
     },
   },
 });

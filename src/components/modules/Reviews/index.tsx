@@ -1,61 +1,167 @@
+import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
+
+import { FaStar } from "react-icons/fa";
 
 import { openWhatsapp } from "../../../pages/api/whatsapp";
 import { sendEmail } from "../../../pages/api/email";
 import { getReviews } from "../../../pages/api/reviews";
 
-import Title from "../../Title";
-import Review from "../../Review";
+import {
+  Container,
+  ReviewsCard,
+  ReviewsContainer,
+  ReviewsContent,
+  ReviewsPhoto,
+  ReviewsSlider,
+} from "../../../styles/pages/reviews";
 
-import styles from "../../../styles/custom.module.css";
+import userPic1 from "/public/user-pic-1.jpeg";
+import userPic2 from "/public/user-pic-2.jpeg";
+import userPic3 from "/public/user-pic-3.jpeg";
+import userPic4 from "/public/user-pic-4.jpeg";
+import userPic5 from "/public/user-pic-5.jpeg";
 
 export default function Reviews() {
   return (
-    <div
-      id="reviews"
-      className="flex items-center justify-between h-full w-full bg-gray-200 flex-col min-h-screen py-6 lg:py-10"
-    >
-      <Title />
+    <Container id="reviews">
+      <div className="header">
+        <span className="title">Reviews</span>
+        <span className="subtitle">
+          + <span>250</span> satisfied customers!
+        </span>
+      </div>
 
-      <section className="flex w-full flex-col mb-4">
-        <span className="font-mont font-normal text-black px-2 mb-4 text-center sm:text-lg md:text-xl lg:text-2xl lg:mb-6">
+      <ReviewsContainer>
+        <span className="reviewsTitle">
           See what customers say about our services:
         </span>
-        <section className="flex w-full h-64 overflow-x-auto px-4 lg:h-80 lg:px-12">
-          {getReviews().map((review) => (
-            <Review
-              key={review.author}
-              message={review.message}
-              author={review.author}
-              stars={review.stars}
-            />
-          ))}
-        </section>
-      </section>
 
-      <section className="flex w-full flex-col lg:flex-row px-4 lg:px-12 md:w-3/4">
-        <button
-          className={`flex flex-row w-full h-12 justify-center items-center font-medium mb-2 lg:mr-4 rounded-lg hover:bg-green-500 transition-all duration-200 ${styles.whatsButtonFilled}`}
-          onClick={() => openWhatsapp()}
-        >
-          <FaWhatsapp
-            className="pr-2 text-white transition-all duration-200"
-            size={26}
-          />
-          Whatsapp
-        </button>
-        <button
-          className={`flex flex-row w-full h-12 justify-center items-center font-medium rounded-lg hover:bg-blue-500 transition-all duration-200 ${styles.emailButtonFilled}`}
-          onClick={() => sendEmail()}
-        >
-          <MdMailOutline
-            className="pr-2 text-white transition-all duration-200"
-            size={28}
-          />
-          Email
-        </button>
-      </section>
-    </div>
+        <ReviewsSlider>
+          <ReviewsCard>
+            <ReviewsContent>
+              <ReviewsPhoto>
+                <Image src={userPic1} alt="User profile picture" />
+              </ReviewsPhoto>
+              <span className="reviewsCardDesc">
+                "I recently used this company for my move and I couldn't be
+                happier with the service I received. The movers were
+                professional, efficient, and took great care of my belongings. I
+                would highly recommend this company to anyone in need of a
+                stress-free move."
+              </span>
+              <div className="reviewsCardFooter">
+                <div className="reviewsStars">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                </div>
+                <span className="reviewsCardCustomerName">Jane Smith</span>
+              </div>
+            </ReviewsContent>
+          </ReviewsCard>
+
+          <ReviewsCard>
+            <ReviewsContent>
+              <ReviewsPhoto>
+                <Image src={userPic2} alt="User profile picture" />
+              </ReviewsPhoto>
+              <span className="reviewsCardDesc">
+                "This company made my move a breeze. The team was on-time,
+                organized, and went above and beyond to ensure everything was
+                packed and transported safely. I was very impressed with their
+                attention to detail and customer service."
+              </span>
+              <div className="reviewsCardFooter">
+                <div className="reviewsStars">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                </div>
+                <span className="reviewsCardCustomerName">Michael Johnson</span>
+              </div>
+            </ReviewsContent>
+          </ReviewsCard>
+
+          <ReviewsCard>
+            <ReviewsContent>
+              <ReviewsPhoto>
+                <Image src={userPic3} alt="User profile picture" />
+              </ReviewsPhoto>
+              <span className="reviewsCardDesc">
+                "I had a great experience with this company. The movers were
+                friendly and made sure to handle my furniture and belongings
+                with care. They also had all the necessary equipment to make the
+                move as smooth as possible. I would definitely use them again."
+              </span>
+              <div className="reviewsCardFooter">
+                <div className="reviewsStars">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                </div>
+                <span className="reviewsCardCustomerName">Sarah Lee</span>
+              </div>
+            </ReviewsContent>
+          </ReviewsCard>
+
+          <ReviewsCard>
+            <ReviewsContent>
+              <ReviewsPhoto>
+                <Image src={userPic4} alt="User profile picture" />
+              </ReviewsPhoto>
+              <span className="reviewsCardDesc">
+                "I was very pleased with the service I received from this
+                company. They were prompt, efficient, and professional. The
+                movers took great care to ensure that everything was packed and
+                transported without damage. I would highly recommend them."
+              </span>
+              <div className="reviewsCardFooter">
+                <div className="reviewsStars">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                </div>
+                <span className="reviewsCardCustomerName">David Brown</span>
+              </div>
+            </ReviewsContent>
+          </ReviewsCard>
+
+          <ReviewsCard>
+            <ReviewsContent>
+              <ReviewsPhoto>
+                <Image src={userPic5} alt="User profile picture" />
+              </ReviewsPhoto>
+              <span className="reviewsCardDesc">
+                "I was very impressed with the level of customer service I
+                received from this company. The team was friendly, efficient,
+                and went above and beyond to make my move as stress-free as
+                possible. I would definitely use them again and recommend them
+                to others."
+              </span>
+              <div className="reviewsCardFooter">
+                <div className="reviewsStars">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                </div>
+                <span className="reviewsCardCustomerName">Emily Davis</span>
+              </div>
+            </ReviewsContent>
+          </ReviewsCard>
+        </ReviewsSlider>
+      </ReviewsContainer>
+    </Container>
   );
 }

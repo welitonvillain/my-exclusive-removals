@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 
-import logoImg from "../../assets/logo.png";
+import logoImg from "/public/logo.png";
 import styles from "../../styles/custom.module.css";
 
 import { handleClickScroll } from "../../pages/api/commons";
